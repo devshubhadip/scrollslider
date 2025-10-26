@@ -1,0 +1,328 @@
+
+/* homepage slider */
+.sliders{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#jeff {
+  overflow: hidden;
+  }
+  
+  #jeff .rod {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  }
+  
+  #jeff .stack {
+  
+  height: 100%;
+  width: fit-content;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  animation: toTheLeft 50s infinite linear;
+  z-index: -2;
+  
+  }
+  
+  #jeff img {
+  
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+  margin: 20px;
+  }
+  
+  
+  @keyframes toTheLeft {
+  
+  0% {
+  
+    transform: translateX(0%);
+  
+  }
+  
+  100% {
+  
+    transform: translateX(-100%);
+  
+  }
+  
+  }
+
+
+    #jeff .stack1 {
+  
+  height: 100%;
+  width: fit-content;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  animation: toTheRight 50s infinite linear;
+  z-index: -2;
+  
+  }
+ 
+  
+  
+  @keyframes toTheRight {
+  
+  0% {
+  
+    transform: translateX(-100%);
+  
+  }
+  
+  100% {
+  
+    transform: translateX(0%);
+  
+  }
+  
+  }
+  
+
+    
+  
+
+
+
+@media screen and (max-width:768px) {
+
+
+
+  #jeff img {
+  
+    height: 100px;
+    width: 100px;
+    }
+
+    #jeff .stack {
+        gap: 0px;
+        }
+
+
+       
+    
+}
+
+
+
+
+
+
+
+.laptop-scroll-hero {
+	position: relative;
+	width: 500px;
+	height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+	padding: 40px 0;
+	background: transparent;
+}
+
+.laptop-scroll-hero .scroll-row {
+	display: flex;
+	gap: 30px;
+	width: max-content;
+	will-change: transform;
+}
+
+.laptop-scroll-hero .laptop-card {
+	width: 165px;
+	height: 210px;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 20px;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+	padding: 20px 15px 20px 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(8px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	cursor: pointer;
+	user-select: none;
+}
+
+.laptop-scroll-hero .laptop-card:hover {
+	transform: translatey(-8px) scale(1.03);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 0 20px rgba(59, 130, 246, 0.1);
+	background: rgba(255, 255, 255, 0.98);
+	border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.laptop-scroll-hero .laptop-card:hover .laptop-image {
+	transform: scale(1.05);
+	filter: brightness(1.05) saturate(1.1);
+}
+
+.laptop-scroll-hero .laptop-card:hover .brand-logo {
+	transform: scale(1.1) rotate(2deg);
+}
+
+.laptop-scroll-hero .laptop-card:hover .price-text {
+	color: #0369a1;
+}
+
+.laptop-scroll-hero .laptop-image {
+	width: 120px;
+	height: 85px;
+	object-fit: contain;
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	filter: none !important;
+	transition: all 0.3s ease;
+	margin-bottom: 6px;
+	flex-shrink: 0;
+}
+
+.laptop-scroll-hero .laptop-name {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	color: #374151;
+	line-height: 1.3;
+	text-align: center;
+	margin-bottom: 6px;
+	transition: color 0.3s ease;
+	flex-shrink: 0;
+}
+
+.laptop-scroll-hero .price-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	color: #374151;
+	line-height: 1.3;
+	text-align: center;
+	margin-bottom: 8px;
+	transition: color 0.3s ease;
+	flex-shrink: 0;
+}
+
+.laptop-scroll-hero .brand-logo {
+	width: 38px;
+	height: 38px;
+	object-fit: contain;
+	border-radius: 8px;
+	background: white;
+	padding: 4px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	flex-shrink: 0;
+}
+/* Fade overlays for smooth edges - increased blur effect */
+.laptop-scroll-hero .fade-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100px;
+	pointer-events: none;
+	z-index: 10;
+}
+
+.laptop-scroll-hero .fade-left {
+	left: 0;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.85) 25%, rgba(255, 255, 255, 0.5) 60%, transparent 100%);
+}
+
+.laptop-scroll-hero .fade-right {
+	right: 0;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.85) 25%, rgba(255, 255, 255, 0.5) 60%, transparent 100%);
+}
+
+@media (max-width: 600px) {
+	.laptop-scroll-hero {
+		width: 100%;
+		height: 400px;
+		gap: 30px;
+		padding: 30px 0;
+	}
+
+	.laptop-scroll-hero .scroll-row {
+		gap: 20px;
+	}
+
+	.laptop-scroll-hero .laptop-card {
+		width: 130px;
+		height: 165px;
+		padding: 15px 10px 15px 10px;
+	}
+
+	.laptop-scroll-hero .laptop-image {
+		width: 90px;
+		height: 65px;
+		margin-bottom: 10px;
+	}
+
+	.laptop-scroll-hero .price-text {
+		font-size: 11px;
+		margin-bottom: 10px;
+	}
+
+	.laptop-scroll-hero .brand-logo {
+		width: 28px;
+		height: 28px;
+	}
+
+	.laptop-scroll-hero .fade-overlay {
+		width: 70px;
+	}
+}
+
+@media (max-width: 480px) {
+	.laptop-scroll-hero {
+		gap: 20px;
+		padding: 20px 0;
+	}
+
+	.laptop-scroll-hero .laptop-card {
+		width: 110px;
+		height: 140px;
+		padding: 12px 8px 12px 8px;
+	}
+
+	.laptop-scroll-hero .laptop-image {
+		width: 75px;
+		height: 55px;
+		margin-bottom: 8px;
+	}
+
+	.laptop-scroll-hero .price-text {
+		font-size: 10px;
+		margin-bottom: 8px;
+	}
+
+	.laptop-scroll-hero .brand-logo {
+		width: 24px;
+		height: 24px;
+	}
+
+	.laptop-scroll-hero .fade-overlay {
+		width: 50px;
+	}
+}
+a{
+  text-decoration: none;
+}
+
+
+
